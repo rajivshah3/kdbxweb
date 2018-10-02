@@ -19,7 +19,8 @@
     "pack:dist-debug": "webpack --progress --colors --debug --devtool source-map --output-pathinfo --config build/config/webpack.config.js",
     "pack:tests": "webpack --progress --colors --config build/config/webpack.tests.config.js",
     "tests:plain": "mocha --recursive -R spec",
-    "tests:cover": "istanbul cover -x 'lib/support/**' node_modules/mocha/bin/_mocha -- --recursive -R spec"
+    "tests:cover": "istanbul cover -x 'lib/support/**' node_modules/mocha/bin/_mocha -- --recursive -R spec",
+    "postinstall": "./node_modules/.bin/rn-nodeify --hack --install 'crypto'"
   },
   "keywords": [
     "kdbx",
@@ -28,8 +29,11 @@
   "author": "Antelle",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-eslint": "^10.0.1",
     "base64-loader": "^1.0.0",
     "coveralls": "^2.11.14",
+    "eslint": "^5.6.1",
     "expect.js": "^0.3.1",
     "exports-loader": "^0.6.3",
     "fs-walk": "0.0.1",
@@ -43,8 +47,18 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "isomorphic-webcrypto": "^1.6.0",
     "pako": "github:keeweb/pako#653c0b00d8941c89d09ed4546d2179001ec44efc",
+    "react-native-crypto": "^2.1.2",
+    "react-native-randombytes": "^3.5.1",
+    "rn-nodeify": "tradle/rn-nodeify",
     "text-encoding": "github:keeweb/text-encoding#4dfb7cb0954c222852092f8b06ae4f6b4f60bfbb",
     "xmldom": "github:keeweb/xmldom#ec8f61f723e2f403adaf7a1bbf55ced4ff1ea0c6"
+  },
+  "react-native": {
+    "crypto": "react-native-crypto"
+  },
+  "browser": {
+    "crypto": "react-native-crypto"
   }
 }
