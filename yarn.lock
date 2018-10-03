@@ -3349,13 +3349,6 @@ react-native-securerandom@^0.1.1:
   dependencies:
     base64-js "*"
 
-react-native-securerandom@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-securerandom/-/react-native-securerandom-0.2.0.tgz#8df331c3db954d7a02f7152f688a1bf43912e554"
-  integrity sha512-2UWEr/3eUJsDFDpqxoZZWpUu2p6In6NPpE8fve8n6ZBUucZS/23WXu6LPv0eqgk+THnQnX4dlk7ggN4JYj8NHg==
-  dependencies:
-    base64-js "*"
-
 readable-stream@1.1:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.13.tgz#f6eef764f514c89e2b9e23146a75ba106756d23e"
